@@ -7,6 +7,7 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb',
     'plugin:prettier/recommended',
+    'plugin:storybook/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -28,7 +29,9 @@ module.exports = {
     'react/function-component-definition': 'off',
     'react/jsx-filename-extension': [
       2,
-      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+      {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
     ],
     'react/react-in-jsx-scope': 'off',
     // we only want single quotes
@@ -38,7 +41,8 @@ module.exports = {
     // we use 2 spaces to indent our code
     indent: ['error', 2],
     // we want to avoid useless spaces
-    'react/prop-types': 'off', // Since we do not use prop-types
+    'react/prop-types': 'off',
+    // Since we do not use prop-types
     'prettier/prettier': [
       'error',
       {
@@ -46,7 +50,8 @@ module.exports = {
         singleQuote: true,
       },
     ],
-    'react/require-default-props': 'off', // Since we do not use prop-types
+    'react/require-default-props': 'off',
+    // Since we do not use prop-types
     'no-multi-spaces': ['error'],
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
