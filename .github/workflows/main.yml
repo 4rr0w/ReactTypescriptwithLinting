@@ -1,0 +1,38 @@
+# on: 
+#   push:
+#     branches:
+#       - production
+# name: 🚀 Deploy Procuction
+# jobs:
+#   FTP-Deploy-Action:
+#     name: 🎉 FTP Deploy
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: 🚚 Get latest code
+#       uses: actions/checkout@v2
+#       with:
+#         fetch-depth: 2
+
+#     - name: Use Node.js 16
+#       uses: actions/setup-node@v2-beta
+#       with:
+#         node-version: '16.13.1'
+#         cache: 'npm'
+    
+#     - name: Create env file
+#       run: |
+#         touch .env
+#         echo REACT_APP_BACKEND_URL=${{ secrets.REACT_APP_BACKEND_URL }} >> .env
+#         cat .env
+#     - name: 🔨 Build Project
+#       run: |
+#         npm install
+#         CI=false && npm run build
+    
+#     - name: 📂 FTP Deploy
+#       uses: SamKirkland/FTP-Deploy-Action@4.0.0
+#       with:
+#         local-dir: ./build/
+#         server: ftp server name
+#         username: ftp user
+#         password: ${{ secrets.ftp_password }}
