@@ -1,0 +1,26 @@
+.inputContainer {
+  display: flex;
+  align-items: center;
+  padding: min(0.4rem, 6px);
+  color: rgba(255, 255, 255, 1);
+  max-height: 100px;
+  font-size: 2rem;
+  border-radius: min(0.4rem, 6px);
+  background-color: transparent;
+}
+
+.input {
+  margin-left: 1vw;
+  border: none;
+  outline: none !important;
+  font-weight: 100 !important;
+  background-color: transparent !important;
+}
+
+.input:focus {
+  box-shadow: none;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 1);
+}
