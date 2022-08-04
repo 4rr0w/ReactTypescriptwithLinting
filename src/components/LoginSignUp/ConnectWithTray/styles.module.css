@@ -1,0 +1,20 @@
+.container {
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+
+.fb,
+.google,
+.github {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 35px;
+}
+
+.fb {
+  color: #4267b2;
+}
