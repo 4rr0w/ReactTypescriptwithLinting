@@ -4,18 +4,16 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import '../App.css';
 import {
-  ConnectWithTray,
-  ConnectWithTrayProps,
-} from '../components/SigninSignup/ConnectWithTray';
+  SignInPannel,
+  SignInPannelProps,
+} from '../components/SigninSignup/SignInPannel';
 
 export default {
-  title: 'components/ConnectWithTray',
-  component: ConnectWithTray,
+  title: 'components/SignInPannel',
+  component: SignInPannel,
 } as Meta;
 
-const Template: Story<ConnectWithTrayProps> = (args) => (
-  <ConnectWithTray {...args} />
-);
+const Template: Story<SignInPannelProps> = (args) => <SignInPannel {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {};

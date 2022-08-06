@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  overflow-y: hidden;
+}
+
+.imgContainer {
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  width: 50%;
+}
+
+.poster {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.pannel {
+  flex-grow: 1;
+}

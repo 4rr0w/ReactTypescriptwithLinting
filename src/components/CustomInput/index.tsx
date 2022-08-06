@@ -4,6 +4,7 @@ import React, { CSSProperties, ReactNode } from 'react';
 import classnames from 'classnames';
 import { Input, InputProps } from '@mui/material';
 import styles from './styles.module.css';
+import { textChangeRangeIsUnchanged } from 'typescript';
 
 export interface CustomInputProps extends InputProps {
   placeholder?: string;
@@ -17,15 +18,14 @@ export interface CustomInputProps extends InputProps {
 }
 
 export const CustomInput: React.FC<CustomInputProps> = ({
-  placeholder = '',
+  placeholder = 'input',
   error = false,
   backgroundColor = 'rgba(0, 0, 0, 0.98)',
   textcolor = 'rgba(255,255,255, 1)',
   className = '',
   width = '100%',
   containerStyle = {},
-  onFocusColor = '#fff',
-
+  onFocusColor = '#b3b3ff',
   ...props
 }) => {
   const [focused, setFocused] = React.useState(false);
@@ -37,7 +37,7 @@ export const CustomInput: React.FC<CustomInputProps> = ({
       style={{
         ...containerStyle,
         backgroundColor,
-        border: `1px solid ${focused ? onFocusColor : backgroundColor}`,
+        border: `1px solid ${focused ? onFocusColor : textcolor}`,
       }}
     >
       <Input
