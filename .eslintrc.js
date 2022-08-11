@@ -26,6 +26,7 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
+    'ordered-imports': 0,
     'react/function-component-definition': 'off',
     'react/jsx-filename-extension': [
       2,

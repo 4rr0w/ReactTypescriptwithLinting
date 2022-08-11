@@ -5,15 +5,15 @@ import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import { FaFacebook } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { GoMarkGithub } from 'react-icons/go';
+import { Link } from 'react-router-dom';
 import styles from './styles.module.css';
 import { CustomInput } from '../../CustomInput';
 import { CustomButton } from '../../CustomButton';
 import { ConnectWithTray } from '../ConnectWithTray';
-import { Link } from 'react-router-dom';
 
 export interface SignUpPannelProps {}
 
-export const SignUpPannel: React.FC<SignUpPannelProps> = ({}) => {
+export const SignUpPannel: React.FC<SignUpPannelProps> = () => {
   return (
     <div className={styles.container}>
       <span style={{ fontSize: '30px', fontWeight: 'bold' }}>

@@ -4,7 +4,6 @@ import React, { CSSProperties, ReactNode } from 'react';
 import classnames from 'classnames';
 import { Input, InputProps } from '@mui/material';
 import styles from './styles.module.css';
-import { textChangeRangeIsUnchanged } from 'typescript';
 
 export interface CustomInputProps extends InputProps {
   placeholder?: string;
